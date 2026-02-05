@@ -23,13 +23,10 @@ Minimal doodling canvas in the IDE.
 Create quick sketches and freehand notes without leaving your editor.
 
 Key features:
-- Simple pen drawing on a clean whiteboard
+- Simple pen and shapes drawing on a clean whiteboard
 - Always available as a tool window
 - One-click clear to start fresh
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
 <!-- Plugin description end -->
 
 ## Installation

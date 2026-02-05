@@ -16,19 +16,16 @@ class ShapePicker(canvas: DoodleCanvas) {
 
         button.toolTipText = "Pick shape tool"
 
-        val penItem = JMenuItem("Pen", IconLoader.getIcon("/icons/shape-pen.svg", ShapePicker::class.java))
         val rectItem = JMenuItem("Rectangle", IconLoader.getIcon("/icons/shape-rectangle.svg", ShapePicker::class.java))
         val circleItem = JMenuItem("Circle", IconLoader.getIcon("/icons/shape-circle.svg", ShapePicker::class.java))
         val triangleItem = JMenuItem("Triangle", IconLoader.getIcon("/icons/shape-triangle.svg", ShapePicker::class.java))
         val hexItem = JMenuItem("Hexagon", IconLoader.getIcon("/icons/shape-hexagon.svg", ShapePicker::class.java))
 
-        penItem.addActionListener { canvas.setTool(DoodleCanvas.Tool.PEN) }
         rectItem.addActionListener { canvas.setTool(DoodleCanvas.Tool.RECTANGLE) }
         circleItem.addActionListener { canvas.setTool(DoodleCanvas.Tool.CIRCLE) }
         triangleItem.addActionListener { canvas.setTool(DoodleCanvas.Tool.TRIANGLE) }
         hexItem.addActionListener { canvas.setTool(DoodleCanvas.Tool.HEXAGON) }
 
-        menu.add(penItem)
         menu.add(rectItem)
         menu.add(circleItem)
         menu.add(triangleItem)

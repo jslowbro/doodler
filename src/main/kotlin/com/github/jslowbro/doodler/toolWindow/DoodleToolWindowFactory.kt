@@ -2,6 +2,7 @@ package com.github.jslowbro.doodler.toolWindow
 
 import com.github.jslowbro.doodler.ui.ColorPicker
 import com.github.jslowbro.doodler.ui.DoodleCanvas
+import com.github.jslowbro.doodler.ui.PenPicker
 import com.github.jslowbro.doodler.ui.ShapePicker
 import com.github.jslowbro.doodler.ui.UndoRedoPanel
 import com.intellij.icons.AllIcons
@@ -50,11 +51,13 @@ class DoodleToolWindowFactory : ToolWindowFactory {
 
         val undoRedoPanel = UndoRedoPanel(canvas, panel)
         val colorPicker = ColorPicker(canvas, colors)
+        val penPicker = PenPicker(canvas)
         val shapePicker = ShapePicker(canvas)
 
         val leftControls = JPanel().apply {
             add(undoRedoPanel.getPanel())
             add(colorPicker.getButton())
+            add(penPicker.getButton())
             add(shapePicker.getButton())
         }
 

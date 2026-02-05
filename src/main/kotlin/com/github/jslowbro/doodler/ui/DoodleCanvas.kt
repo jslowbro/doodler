@@ -129,6 +129,10 @@ class DoodleCanvas : JComponent() {
         penColor = color
     }
 
+    fun setPenWidth(width: Float) {
+        penWidth = width
+    }
+
     fun undo() {
         if (undoStack.isEmpty()) {
             return

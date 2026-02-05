@@ -9,6 +9,6 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.jslowbro.doodler.toolWindow.DoodleToolWindowFactory" id="Doodler"/>
+        <toolWindow factoryClass="com.github.jslowbro.doodler.toolWindow.DoodleToolWindowFactory" id="Doodler" icon="icons/doodler-icon.svg"/>
     </extensions>
 </idea-plugin>

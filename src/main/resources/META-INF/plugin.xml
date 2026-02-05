@@ -2,7 +2,9 @@
 <idea-plugin>
     <id>com.janchabik.doodler</id>
     <name>doodler</name>
-    <vendor>janchabik</vendor>
+    <vendor email="jan.chabik.work@gmail.com" url="https://github.com/jslowbro/doodler">jslowbro</vendor>
+    <url>https://github.com/jslowbro/doodler</url>
+    <idea-version since-build="252"/>
 
     <depends>com.intellij.modules.platform</depends>
 

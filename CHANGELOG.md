@@ -3,5 +3,7 @@
 # doodler Changelog
 
 ## [Unreleased]
+
+## [0.0.1]
 ### Added
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- Minimalistic tool for doodling inside your IDE.

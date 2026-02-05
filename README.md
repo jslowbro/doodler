@@ -18,7 +18,14 @@
 - [ ] Configure the [CODECOV_TOKEN](https://docs.codecov.com/docs/quick-start) secret for automated test coverage reports on PRs
 
 <!-- Plugin description -->
-Minimalistic tool for doodling inside your IDE.
+Minimal doodling canvas in the IDE.
+
+Create quick sketches and freehand notes without leaving your editor.
+
+Key features:
+- Simple pen drawing on a clean whiteboard
+- Always available as a tool window
+- One-click clear to start fresh
 
 This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
 

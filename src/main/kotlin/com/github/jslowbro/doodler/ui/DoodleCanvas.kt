@@ -3,7 +3,6 @@ package com.github.jslowbro.doodler.ui
 import java.awt.BasicStroke
 import java.awt.Color
 import java.awt.Graphics
-import java.awt.Graphics2D
 import java.awt.Point
 import java.awt.RenderingHints
 import java.awt.event.ComponentAdapter
@@ -19,8 +18,8 @@ class DoodleCanvas : JComponent() {
     private var surface: BufferedImage? = null
     private var lastPoint: Point? = null
 
-    var penColor: Color = Color(0, 0, 0)
-    var penWidth: Float = 3f
+    private var penColor: Color = Color(0, 0, 0)
+    private var penWidth: Float = 3f
 
     init {
         isOpaque = true

@@ -20,7 +20,9 @@ import javax.swing.JComponent;
 import javax.swing.JPopupMenu;
 import javax.swing.JPanel;
 import javax.swing.KeyStroke;
+import javax.swing.JMenuItem;
 import com.intellij.icons.AllIcons;
+import com.intellij.openapi.util.IconLoader;
 import org.jetbrains.annotations.NotNull;
 
 public class DoodleToolWindowFactory implements ToolWindowFactory {
@@ -106,6 +108,34 @@ public class DoodleToolWindowFactory implements ToolWindowFactory {
         leftControls.add(undoButton);
         leftControls.add(redoButton);
         leftControls.add(colorButton);
+
+        canvas.setTool(DoodleCanvas.Tool.PEN);
+
+        JButton shapesButton = new JButton("Shapes");
+        shapesButton.setToolTipText("Pick shape tool");
+        JPopupMenu shapesMenu = new JPopupMenu();
+
+        JMenuItem penItem = new JMenuItem("Pen", IconLoader.getIcon("/icons/shape-pen.svg", DoodleToolWindowFactory.class));
+        JMenuItem rectItem = new JMenuItem("Rectangle", IconLoader.getIcon("/icons/shape-rectangle.svg", DoodleToolWindowFactory.class));
+        JMenuItem circleItem = new JMenuItem("Circle", IconLoader.getIcon("/icons/shape-circle.svg", DoodleToolWindowFactory.class));
+        JMenuItem triangleItem = new JMenuItem("Triangle", IconLoader.getIcon("/icons/shape-triangle.svg", DoodleToolWindowFactory.class));
+        JMenuItem hexItem = new JMenuItem("Hexagon", IconLoader.getIcon("/icons/shape-hexagon.svg", DoodleToolWindowFactory.class));
+
+        penItem.addActionListener(event -> canvas.setTool(DoodleCanvas.Tool.PEN));
+        rectItem.addActionListener(event -> canvas.setTool(DoodleCanvas.Tool.RECTANGLE));
+        circleItem.addActionListener(event -> canvas.setTool(DoodleCanvas.Tool.CIRCLE));
+        triangleItem.addActionListener(event -> canvas.setTool(DoodleCanvas.Tool.TRIANGLE));
+        hexItem.addActionListener(event -> canvas.setTool(DoodleCanvas.Tool.HEXAGON));
+
+        shapesMenu.add(penItem);
+        shapesMenu.add(rectItem);
+        shapesMenu.add(circleItem);
+        shapesMenu.add(triangleItem);
+        shapesMenu.add(hexItem);
+
+        shapesButton.addActionListener(event -> shapesMenu.show(shapesButton, 0, shapesButton.getHeight()));
+
+        leftControls.add(shapesButton);
         toolbar.add(leftControls, BorderLayout.WEST);
         toolbar.add(clearButton, BorderLayout.EAST);
 
